@@ -1,0 +1,1367 @@
+[
+    {
+        "id": "dashboard_flow",
+        "type": "tab",
+        "label": "Forest Fire Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b803c991c9965ada",
+        "type": "tab",
+        "label": "Style",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2f60ffc4b31dda6",
+        "type": "ui_tab",
+        "name": "IoT Device Sensor Data",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8738f50f046cc529",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#ff0000",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#ff0000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#ff0000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ff4d4d",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#ff0000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 20,
+                "gy": 20,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "47fd50255fd7f160",
+        "type": "ui_group",
+        "name": "Sensor Data",
+        "tab": "e2f60ffc4b31dda6",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1af50b55f39e626c",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": "2",
+        "height": "1"
+    },
+    {
+        "id": "c514e2e135705e89",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": "2",
+        "height": "1"
+    },
+    {
+        "id": "8cbb8c0ca2aa3795",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": "8",
+        "height": "1"
+    },
+    {
+        "id": "2403da1a144af392",
+        "type": "ui_group",
+        "name": "Unit Info",
+        "tab": "e2f60ffc4b31dda6",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f870bcf46901856",
+        "type": "ui_group",
+        "name": "Qualitative Data",
+        "tab": "e2f60ffc4b31dda6",
+        "order": 3,
+        "disp": false,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e82407182b2dcc4",
+        "type": "ui_tab",
+        "name": "Mesh Map",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "47b151b3ac19c263",
+        "type": "ui_group",
+        "name": "Map",
+        "tab": "9e82407182b2dcc4",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8a519f66d6897477",
+        "type": "mqtt-broker",
+        "name": "TTN MQTT Server",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "901270ff145b87a4",
+        "type": "postgreSQLConfig",
+        "name": "wildfires_db_conn",
+        "host": "postgres_db",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "wildfires",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "dev",
+        "userFieldType": "str",
+        "password": "dev",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "05b201e5efa5b0e2",
+        "type": "ui_group",
+        "name": "Script",
+        "tab": "9e82407182b2dcc4",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4b22f18c19ec379a",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "31b89c9d86e03ee7",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ac87b73632b65be3",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bdd79962f8aa2ff2",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "382d88e87b2564ef",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "da777a0fc90ae5b2",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "22df2137b6b82c64",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "15c9361c71bb1345",
+        "type": "ui_spacer",
+        "z": "dashboard_flow",
+        "name": "spacer",
+        "group": "47fd50255fd7f160",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5e9be3b2ae355e2e",
+        "type": "ui_tab",
+        "name": "List of IoT Devices",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b076d9087c413d4d",
+        "type": "ui_group",
+        "name": "Devices",
+        "tab": "5e9be3b2ae355e2e",
+        "order": 2,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "adeba8cd205f9f70",
+        "type": "ui_group",
+        "name": "Devices properties",
+        "tab": "5e9be3b2ae355e2e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b184093a6b896d6e",
+        "type": "ui_group",
+        "name": "Table Actions",
+        "tab": "5e9be3b2ae355e2e",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9340723baef256ec",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Update Dashboard",
+        "func": "let sensorData = msg.payload;\n\nif (!Array.isArray(sensorData) || sensorData.length === 0) {\n    return null; // Return null if no data is present\n}\n\nlet sensorValues = sensorData[0];\n\nlet msg_DeviceID = { payload: sensorValues.device_id }; // Device ID\nlet msg_DeviceEUI = { payload: sensorValues.device_eui }; // Device EUI\n\nlet msg_DeviceLocation = { payload: `${sensorValues.device_lat}, ${sensorValues.device_long}` }; // Device Latitude and Longitude\n\nlet msg_CO2 = { payload: sensorValues.co2_ppm }; // CO2 PPM\nlet msg_Temperature = { payload: sensorValues.temperature }; // Temperature\nlet msg_Humidity = { payload: sensorValues.humidity }; // Humidity\nlet msg_PM2_5 = { payload: sensorValues.pm25 }; // PM2.5\nlet msg_CO = { payload: sensorValues.co_ppm }; // CO PPM\n\nlet msg_Time = { payload: new Date(sensorValues.timestamp).toLocaleString() }; // Formatted timestamp\n\nreturn [msg_DeviceID, msg_DeviceEUI, msg_DeviceLocation, msg_CO2, msg_CO, msg_PM2_5, msg_Temperature, msg_Humidity, msg_Time];\n",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 280,
+        "wires": [
+            [
+                "2d5ad32000f3fe38"
+            ],
+            [
+                "3b98ed5b38ae7048"
+            ],
+            [
+                "14c2d3a50f46e44a"
+            ],
+            [
+                "gauge_CO2"
+            ],
+            [
+                "gauge_CO"
+            ],
+            [
+                "gauge_PM25"
+            ],
+            [
+                "gauge_Temperature"
+            ],
+            [
+                "gauge_Humidity"
+            ],
+            [
+                "text_Time"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_CO2",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "CO2 Gauge",
+        "group": "47fd50255fd7f160",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO2 (ppm)",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "10000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "800",
+        "seg2": 2000,
+        "diff": false,
+        "className": "",
+        "x": 1663,
+        "y": 229,
+        "wires": []
+    },
+    {
+        "id": "gauge_CO",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "CO Gauge",
+        "group": "47fd50255fd7f160",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO (ppm)",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 50,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": 10,
+        "seg2": 35,
+        "diff": false,
+        "className": "",
+        "x": 1663,
+        "y": 269,
+        "wires": []
+    },
+    {
+        "id": "gauge_PM25",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "PM2.5 Gauge",
+        "group": "47fd50255fd7f160",
+        "order": 7,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "PM2.5 (µg/m³)",
+        "label": "µg/m³",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": 35,
+        "seg2": 75,
+        "diff": false,
+        "className": "",
+        "x": 1673,
+        "y": 309,
+        "wires": []
+    },
+    {
+        "id": "gauge_Temperature",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "Temperature Gauge",
+        "group": "47fd50255fd7f160",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature (°C)",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "70",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 1693,
+        "y": 349,
+        "wires": []
+    },
+    {
+        "id": "gauge_Humidity",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "Humidity Gauge",
+        "group": "47fd50255fd7f160",
+        "order": 5,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": 30,
+        "seg2": "50",
+        "diff": false,
+        "className": "",
+        "x": 1673,
+        "y": 389,
+        "wires": []
+    },
+    {
+        "id": "text_Time",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "47fd50255fd7f160",
+        "order": 1,
+        "width": 8,
+        "height": 1,
+        "name": "Last Reading Time",
+        "label": "Last Reading:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1683,
+        "y": 429,
+        "wires": []
+    },
+    {
+        "id": "2d5ad32000f3fe38",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "2403da1a144af392",
+        "order": 1,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Unit ID:",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1653,
+        "y": 109,
+        "wires": []
+    },
+    {
+        "id": "14c2d3a50f46e44a",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "2403da1a144af392",
+        "order": 3,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Location:",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1653,
+        "y": 189,
+        "wires": []
+    },
+    {
+        "id": "e39b6d01467f43f5",
+        "type": "ui_gauge",
+        "z": "dashboard_flow",
+        "name": "Fire Risk",
+        "group": "7f870bcf46901856",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Fire Risk (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": 40,
+        "seg2": 60,
+        "diff": false,
+        "className": "",
+        "x": 1653,
+        "y": 489,
+        "wires": []
+    },
+    {
+        "id": "4e376b492e141bec",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Fire Probability function",
+        "func": "let value = msg.payload;\n\nvar text = \"nothing\";\n\nif (value >= 0 && value <= 20) {\n    text = \"Very Low\";\n}\nelse if (value >= 21 && value <= 40) {\n    text = \"Moderate Low\";\n}\nelse if (value >= 41 && value <= 60) {\n    text = \"Moderate High\";\n}\nelse if (value >= 61 && value <= 80) {\n    text = \"Very High\";\n}\nelse if (value >= 81 && value <= 100) {\n    text = \"Most likely Fire\";\n}\n\nmsg.payload = text;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1703,
+        "y": 529,
+        "wires": [
+            [
+                "df02c9fe0bbf6677"
+            ]
+        ]
+    },
+    {
+        "id": "df02c9fe0bbf6677",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "7f870bcf46901856",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Impact,Impact,Charcoal,sans-serif",
+        "fontSize": "30",
+        "color": "#00ff00",
+        "x": 1903,
+        "y": 529,
+        "wires": []
+    },
+    {
+        "id": "9e7d0e171fa75ec7",
+        "type": "ui_worldmap",
+        "z": "dashboard_flow",
+        "group": "47b151b3ac19c263",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Map",
+        "lat": "39.153265",
+        "lon": "-8.935543",
+        "zoom": "18",
+        "layer": "EsriS",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "true",
+        "zoomlock": "true",
+        "hiderightclick": "false",
+        "coords": "deg",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "9f43d1992373010f",
+        "type": "mqtt in",
+        "z": "dashboard_flow",
+        "name": "",
+        "topic": "v3/wildfire-sensor@ttn/devices/+/up",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8a519f66d6897477",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "630f0cd24085609a"
+            ]
+        ]
+    },
+    {
+        "id": "630f0cd24085609a",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Add Data to DB",
+        "func": "\nlet uplinkMessage = msg.payload.uplink_message;\n\nif (!uplinkMessage || !uplinkMessage.decoded_payload) {\n    return null;\n}\n\nlet decodedPayload = uplinkMessage.decoded_payload;\n\nlet timestamp = new Date(uplinkMessage.rx_metadata[0].time).toISOString();\n\nlet sensorData = {\n    co2: decodedPayload.co2,\n    co: decodedPayload.co_rs_ratio,\n    pm25: decodedPayload.pm2_5,\n    temperature: decodedPayload.temperature,\n    humidity: decodedPayload.humidity,\n    deveui: decodedPayload.devEUI,\n    timestamp: timestamp\n};\n\nmsg.params = [sensorData.co2, sensorData.co, sensorData.pm25, sensorData.temperature, sensorData.humidity, sensorData.deveui, sensorData.timestamp]\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "c3faf942b9171cc5"
+            ]
+        ]
+    },
+    {
+        "id": "c3faf942b9171cc5",
+        "type": "postgresql",
+        "z": "dashboard_flow",
+        "name": "",
+        "query": "INSERT INTO sensor_data (device_id, co2_ppm, co_ppm, pm25, temperature, humidity, timestamp)\nVALUES ((SELECT id FROM devices WHERE eui = $6), $1, $2, $3, $4, $5, $7);\n",
+        "postgreSQLConfig": "901270ff145b87a4",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 970,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "286cefd94cd80e0a",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Add Markers to Worlmap",
+        "func": "const devices = msg.payload;\n\nconst markers = devices.map(device => {\n    return {\n        name: \"Device ID: \" + device.id,\n        lat: device.latitude,\n        lon: device.longitude,\n        icon: \"satellite\",\n        iconSize: [512, 512],\n        iconColor: \"#eb4034\",\n        popup: `<div style='text-align:center; padding: 20px 0;'>\n                    <p style=\"font-weight:bold;\">Device EUI: \\\"${device.eui}\\\"</p>\n                    <button class=\"chkDeviceData\" style=\"font-weight: bold; width: 100px; height: 30px;\"\n                    onclick=\\'feedback(\"Device ID: \" + \"${device.id}\",\"${device.eui}\")\\'>\n                        Check Data\n                    </button>                    \n                </div>`\n                \n    };\n});\n\nmsg.payload = markers;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 820,
+        "wires": [
+            [
+                "9e7d0e171fa75ec7"
+            ]
+        ]
+    },
+    {
+        "id": "71f6d44316b31fd8",
+        "type": "ui_ui_control",
+        "z": "dashboard_flow",
+        "name": "",
+        "events": "all",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e2fd2b6488f1378",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Change Tab",
+        "func": "if (msg.payload.action === \"feedback\" && msg.payload.value) {\n    const dashboardTab = \"IoT Device Sensor Data\";\n    \n    msg.payload = {\n        \"tab\": dashboardTab,\n        \"data\": {\n            \"deviceEUI\": msg.payload.value\n        }\n    };\n    \n    return msg; \n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 435,
+        "y": 280,
+        "wires": [
+            [
+                "71f6d44316b31fd8",
+                "d5991e84b5e674ef"
+            ]
+        ]
+    },
+    {
+        "id": "82cb74cf5793849a",
+        "type": "postgresql",
+        "z": "dashboard_flow",
+        "name": "Select Sensor Data",
+        "query": "SELECT \n    devices.id AS device_id, \n    devices.eui AS device_eui, \n    devices.lat AS device_lat, \n    devices.long AS device_long, \n    sensor_data.co2_ppm, \n    sensor_data.co_ppm, \n    sensor_data.pm25, \n    sensor_data.temperature, \n    sensor_data.humidity, \n    sensor_data.timestamp\nFROM \n    sensor_data \nINNER JOIN \n    devices ON sensor_data.device_id = devices.id\nWHERE \n    devices.eui = $1\nORDER BY \n    sensor_data.timestamp DESC \nLIMIT 1;",
+        "postgreSQLConfig": "901270ff145b87a4",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1110,
+        "y": 280,
+        "wires": [
+            [
+                "9340723baef256ec",
+                "9d435103a4551820"
+            ]
+        ]
+    },
+    {
+        "id": "1e4ec9b904213fec",
+        "type": "worldmap in",
+        "z": "dashboard_flow",
+        "name": "",
+        "path": "/worldmap",
+        "events": "connect,disconnect,point,layer,bounds,files,draw,other",
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "9e2fd2b6488f1378"
+            ]
+        ]
+    },
+    {
+        "id": "d5991e84b5e674ef",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Filter Device EUI",
+        "func": "if (msg.payload && msg.payload.data && msg.payload.data.deviceEUI) {\n    let devEUI = msg.payload.data.deviceEUI;\n\n    msg.params = [devEUI];\n\n    return msg;\n}\n\nreturn null; \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 280,
+        "wires": [
+            [
+                "82cb74cf5793849a"
+            ]
+        ]
+    },
+    {
+        "id": "3b98ed5b38ae7048",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "2403da1a144af392",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Device EUI:",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1663,
+        "y": 149,
+        "wires": []
+    },
+    {
+        "id": "9d435103a4551820",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Assess Fire Risk",
+        "func": "let sensorData = msg.payload;\n\nif (!sensorData || sensorData.length === 0) {\n    return null; \n}\n\n// Extract relevant sensor values\nlet temperature = sensorData[0].temperature; // Temperature\nlet humidity = sensorData[0].humidity; // Humidity\nlet co2 = sensorData[0].co2_ppm; // CO2 levels\nlet pm25 = sensorData[0].pm25; // PM2.5 levels\nlet co = sensorData[0].co_ppm; // CO levels\n\n// Define weights based on outdoor conditions\nconst weightTemperature = 0.2; // Weight for temperature\nconst weightHumidity = 0.1; // Weight for humidity (consider using an inverse relationship)\nconst weightCO2 = 0.15; // Weight for CO2\nconst weightPM25 = 3; // Weight for PM2.5\nconst weightCO = 0.3; // Weight for CO\n\nlet tempThreshold = 60;\nlet rhThreshold = 30; \n\nlet coNorm = co / 100;\nlet co2Norm = co2 / 5000;\nlet pm25Norm = pm25 / 1000;\n\nlet tempDiffNorm = (tempThreshold - temperature) / 100;\nlet rhDiffNorm = (rhThreshold - humidity) / 100;\n\nlet risk_score =\n    weightCO * coNorm +\n    weightCO2 * co2Norm +\n    weightPM25 * pm25Norm +\n    weightTemperature * tempDiffNorm +\n    weightHumidity * rhDiffNorm;\n\nlet scaled_risk_score = risk_score * 100;\n\nscaled_risk_score = parseFloat(scaled_risk_score.toFixed(2));\n\n\nlet msg_FireProbability = { payload: scaled_risk_score };\n\n\nreturn [msg_FireProbability];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1382,
+        "y": 435,
+        "wires": [
+            [
+                "e39b6d01467f43f5",
+                "4e376b492e141bec"
+            ]
+        ]
+    },
+    {
+        "id": "22140654b7d9a248",
+        "type": "ui_table",
+        "z": "dashboard_flow",
+        "group": "b076d9087c413d4d",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 1710,
+        "y": 940,
+        "wires": [
+            [
+                "9f561c5bc2be850b"
+            ]
+        ]
+    },
+    {
+        "id": "2c135d553d6d90f1",
+        "type": "postgresql",
+        "z": "dashboard_flow",
+        "name": "Select All Devices",
+        "query": "select d.id as ID, d.eui as EUI, d.lat as Latitude, d.long as Longitude, sq.timestamp, sq.co2_ppm as co2, sq.co_ppm as co, sq.pm25, sq.temperature, sq.humidity, sq.timestamp from(select data.device_id, data.co2_ppm, data.co_ppm, data.pm25, data.temperature, data.humidity, data.timestamp, row_number() over(partition by data.device_id order by data.timestamp desc) as rnk from sensor_data as data) sq INNER JOIN devices d ON sq.device_id = d.id WHERE sq.rnk = 1;",
+        "postgreSQLConfig": "901270ff145b87a4",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1190,
+        "y": 940,
+        "wires": [
+            [
+                "286cefd94cd80e0a",
+                "6b7c0ea54c54948a"
+            ]
+        ]
+    },
+    {
+        "id": "4d00580cfe385d5c",
+        "type": "inject",
+        "z": "dashboard_flow",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 570,
+        "y": 980,
+        "wires": [
+            [
+                "562b8cd19bf2ad07"
+            ]
+        ]
+    },
+    {
+        "id": "42e052389f822cea",
+        "type": "postgresql",
+        "z": "dashboard_flow",
+        "name": "Insert Into DB",
+        "query": "INSERT INTO devices (eui, lat, long) VALUES ($1,$2,$3) ;",
+        "postgreSQLConfig": "901270ff145b87a4",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 660,
+        "y": 840,
+        "wires": [
+            [
+                "562b8cd19bf2ad07"
+            ]
+        ]
+    },
+    {
+        "id": "aa6a9e3810c7fc31",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Format Data",
+        "func": "let deviceEUI = msg.payload[\"device_eui\"];\nlet latitude = msg.payload[\"latitude\"];\nlet longitude = msg.payload[\"longitude\"];\n\nif (!deviceEUI || latitude === null || longitude === null) {\n    return null;\n}\n\nmsg.params = [\n    deviceEUI,\n    parseFloat(latitude),  \n    parseFloat(longitude)  \n];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "42e052389f822cea"
+            ]
+        ]
+    },
+    {
+        "id": "875e7ff260948354",
+        "type": "ui_form",
+        "z": "dashboard_flow",
+        "name": "",
+        "label": "Device Properties",
+        "group": "adeba8cd205f9f70",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Device EUI",
+                "value": "device_eui",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Latitude",
+                "value": "latitude",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Longitude",
+                "value": "longitude",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "device_eui": "",
+            "latitude": "",
+            "longitude": ""
+        },
+        "payload": "",
+        "submit": "+ Add Device",
+        "cancel": "Cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "aa6a9e3810c7fc31"
+            ]
+        ]
+    },
+    {
+        "id": "562b8cd19bf2ad07",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Select All Devices",
+        "func": "msg.params = [];\n\nmsg.topic = \"select d.id, d.eui, d.lat as latitude, d.long as longitude, sq.timestamp, sq.co2_ppm as co2, sq.co_ppm as co, sq.pm25, sq.temperature, sq.humidity, sq.timestamp from(select data.device_id, data.co2_ppm, data.co_ppm, data.pm25, data.temperature, data.humidity, data.timestamp, row_number() over(partition by data.device_id order by data.timestamp desc) as rnk from sensor_data as data) sq INNER JOIN devices d ON sq.device_id = d.id WHERE sq.rnk = 1;\";\n\n//msg.topic = \"SELECT id, eui, lat, long FROM devices;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 940,
+        "wires": [
+            [
+                "2c135d553d6d90f1"
+            ]
+        ]
+    },
+    {
+        "id": "6c6196bef56a4eb6",
+        "type": "ui_button",
+        "z": "dashboard_flow",
+        "name": "",
+        "group": "b184093a6b896d6e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "fa-trash",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1100,
+        "wires": [
+            [
+                "6a137a0789f0b64f"
+            ]
+        ]
+    },
+    {
+        "id": "60ce411954e6ac23",
+        "type": "ui_text",
+        "z": "dashboard_flow",
+        "group": "b184093a6b896d6e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Selected Deivce ID:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2190,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "6a137a0789f0b64f",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Delete Selected Device",
+        "func": "const selectedDeviceID = flow.get(\"selectedDevice.ID\")\n\nmsg.params = [\n    selectedDeviceID\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1100,
+        "wires": [
+            [
+                "e2ac0d23854563a3"
+            ]
+        ]
+    },
+    {
+        "id": "e2ac0d23854563a3",
+        "type": "postgresql",
+        "z": "dashboard_flow",
+        "name": "",
+        "query": "DELETE FROM devices WHERE id=$1;",
+        "postgreSQLConfig": "901270ff145b87a4",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 650,
+        "y": 1100,
+        "wires": [
+            [
+                "562b8cd19bf2ad07",
+                "8837cae50c6a298a"
+            ]
+        ]
+    },
+    {
+        "id": "9f561c5bc2be850b",
+        "type": "change",
+        "z": "dashboard_flow",
+        "name": "Get Selected ID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "selectedDevice",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ID",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1920,
+        "y": 940,
+        "wires": [
+            [
+                "60ce411954e6ac23"
+            ]
+        ]
+    },
+    {
+        "id": "8837cae50c6a298a",
+        "type": "change",
+        "z": "dashboard_flow",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1920,
+        "y": 1100,
+        "wires": [
+            [
+                "60ce411954e6ac23"
+            ]
+        ]
+    },
+    {
+        "id": "6b7c0ea54c54948a",
+        "type": "function",
+        "z": "dashboard_flow",
+        "name": "Assess Fire Risk 2",
+        "func": "let sensorData = msg.payload;\n\nif (!sensorData || sensorData.length === 0) {\n    return null;\n}\n\nlet results = [];\n\nsensorData.forEach(data => {\n    let temperature = data.temperature;\n    let humidity = data.humidity;\n    let co2 = data.co2;\n    let pm25 = data.pm25;\n    let co = data.co;\n\n    const weightTemperature = 0.2;\n    const weightHumidity = 0.1;\n    const weightCO2 = 0.15;\n    const weightPM25 = 3;\n    const weightCO = 0.3;\n\n    let tempThreshold = 60;\n    let rhThreshold = 30;\n\n    let coNorm = co / 100;\n    let co2Norm = co2 / 5000;\n    let pm25Norm = pm25 / 1000;\n\n    let tempDiffNorm = (tempThreshold - temperature) / 100;\n    let rhDiffNorm = (rhThreshold - humidity) / 100;\n\n    let risk_score =\n        weightCO * coNorm +\n        weightCO2 * co2Norm +\n        weightPM25 * pm25Norm +\n        weightTemperature * tempDiffNorm +\n        weightHumidity * rhDiffNorm;\n\n    let scaled_risk_score = risk_score * 100;\n    scaled_risk_score = parseFloat(scaled_risk_score.toFixed(2));\n\n    let result = {\n        \"ID\": data.id,\n        \"EUI\": data.eui,\n        \"Latitude\": data.latitude,\n        \"Longitude\": data.longitude,\n        \"Fire Risk (%)\": scaled_risk_score\n    };\n\n    results.push(result);\n});\n\nmsg.payload = results;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 940,
+        "wires": [
+            [
+                "22140654b7d9a248"
+            ]
+        ]
+    },
+    {
+        "id": "1b665c5613950a54",
+        "type": "ui_button",
+        "z": "dashboard_flow",
+        "name": "",
+        "group": "47b151b3ac19c263",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 580,
+        "y": 940,
+        "wires": [
+            [
+                "562b8cd19bf2ad07"
+            ]
+        ]
+    },
+    {
+        "id": "c005b86d4757f72b",
+        "type": "debug",
+        "z": "dashboard_flow",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9c34eb7e77a1d8f9",
+        "type": "ui_template",
+        "z": "b803c991c9965ada",
+        "group": "47fd50255fd7f160",
+        "name": "Dashboard Style",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    ui-card-panel {\n        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;\n        border-radius: 15px;\n    }\n\n    .masonry-container {\n        display: flex!important;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 250,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    }
+]

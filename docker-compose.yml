@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: wildfires
+    volumes:
+      - /D/Uni/ISCTE/Thesis/docker-volumes/postgre:/var/lib/postgresql/data
+      - ./postgres_init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - widlfires-app-network
+
+
+  node-red:
+    image: nodered/node-red:latest
+    container_name: node_red
+    ports:
+      - "1880:1880"
+    volumes:
+      - /D/Uni/ISCTE/Thesis/docker-volumes/node-red:/data
+    networks:
+      - widlfires-app-network
+
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - widlfires-app-network
+
+networks:
+  widlfires-app-network:
+    driver: bridge
